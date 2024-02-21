@@ -20,8 +20,6 @@ class Point {
     }
 }
 
-
-
 class SAW {
 
     constructor(canvas, startPoint) {
@@ -134,9 +132,14 @@ class SAW {
             else return 'red';
         })();
 
-        this.drawPath({ x: this.currentPoint.x * 20 + MARGIN, y: this.currentPoint.y * 20 + MARGIN }, { x: i * 20 + MARGIN, y: j * 20 + MARGIN }, color);
-        this.drawDot(this.currentPoint.x * 20 + MARGIN, this.currentPoint.y * 20 + MARGIN, color);
-        this.drawDot(i * 20 + MARGIN, j * 20 + MARGIN, color);
+        this.drawPath(
+            { x: this.currentPoint.x * 20 + MARGIN, y: this.currentPoint.y * 20 + MARGIN },
+            { x: i * 20 + MARGIN, y: j * 20 + MARGIN }, color);
+        this.drawDot(this.currentPoint.x * 20 + MARGIN,
+            this.currentPoint.y * 20 + MARGIN, color);
+        this.drawDot(i * 20 + MARGIN,
+            j * 20 + MARGIN,
+            color);
         this.currentPoint.x = i;
         this.currentPoint.y = j;
         setTimeout(() => {
@@ -144,7 +147,6 @@ class SAW {
         }, PING_PONG);
     }
 
-    /* PRIVATE */
     initGrid() {
         this.grid = [];
         for (let i = 0; i < 50; i += 1) {
@@ -155,6 +157,4 @@ class SAW {
             this.grid.push(row);
         }
     }
-
-
 }
