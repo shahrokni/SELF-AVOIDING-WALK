@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 0; margin: 0;width: 100%; height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="self-avoiding-walk.js"></script>
+    <title>Self Avoiding Walk</title>
+</head>
+
+<body style="padding: 0; margin: 0; width: 100%; height: 100%; background-color: black;">
+
+    <svg id="canvas" style="width: 100%; height:100%; padding:0; margin:0;">
+
+
+    </svg>
+    <script>
+        setTimeout(() => {
+            const canvas = document.getElementById('canvas');
+            const saw = new SAW(canvas, { x: 0, y: 0 });
+            saw.start();
+        }, 3000)
+
+    </script>
+
+</body>
+
+</html>
