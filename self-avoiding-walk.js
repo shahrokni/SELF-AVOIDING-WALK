@@ -8,7 +8,7 @@
 
 const CUSTOM_EVENT = "NEXT_CELL_CALCULATED";
 const MARGIN = 300;
-const PING_PONG = 50;
+const PING_PONG = 20;
 
 class Point {
     constructor(visited) {
